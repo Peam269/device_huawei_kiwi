@@ -102,6 +102,9 @@ function blob_fixup() {
                 "${PATCHELF}" --add-needed "libshim_cutils.so" "$LIBCUTILS_SHIM"
             done
             ;;
+        vendor/lib/mediadrm/libwvdrmengine.so)
+            "${PATCHELF}" --replace-needed libprotobuf-cpp-lite.so libprotobuf-cpp-lite-v29.so "${2}"
+            ;;
     esac
 }
 
