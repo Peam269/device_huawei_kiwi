@@ -69,8 +69,7 @@ PRODUCT_PACKAGES += \
     audio_amplifier.msm8916 \
     libqcompostprocbundle \
     libqcomvisualizer \
-    libqcomvoiceprocessing \
-    tinymix
+    libqcomvoiceprocessing
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
