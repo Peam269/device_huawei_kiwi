@@ -61,6 +61,9 @@ BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 TARGET_SCREEN_DENSITY := 460
 
+# Encryption
+TARGET_LEGACY_HW_DISK_ENCRYPTION := true
+
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := sdfat
 
