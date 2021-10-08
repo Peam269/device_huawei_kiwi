@@ -18,8 +18,8 @@ cc_library_static {
     recovery_available: true,
     srcs: ["init_kiwi.cpp"],
     include_dirs: [
-        "system/core/base/include",
         "system/core/init",
+        "system/libbase/include",
     ],
     static_libs: [
         "libbase",
