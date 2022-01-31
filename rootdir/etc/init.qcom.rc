@@ -130,6 +130,11 @@ on boot
 
     mkdir /dev/oinv 775 root system
 
+service loggy /vendor/bin/loggy.sh
+    class core
+    user root
+    oneshot
+
 # msm specific files that need to be created on /data
 on post-fs-data
     # Create directory for TZ Apps
