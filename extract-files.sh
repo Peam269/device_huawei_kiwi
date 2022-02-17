@@ -51,6 +51,60 @@ else
   fi
 fi
 
+function blob_fixup() {
+    case "${1}" in
+        vendor/lib64/hw/fingerprint.msm8916.so)
+            ;&
+        vendor/lib64/libcalmodule_akm.so)
+            ;&
+        vendor/lib64/libdmd.so)
+            ;&
+        vendor/lib64/libsecure_boot_keybox.so)
+            ;&
+        vendor/lib64/sensors.kiwi.so)
+            ;&
+        vendor/lib/libcalmodule_akm.so)
+            ;&
+        vendor/lib/libdmd.so)
+            ;&
+        vendor/lib/libchromatix_imx219_liteon_pad_zsl_preview.so)
+            ;&
+        vendor/lib/libchromatix_imx219_liteon_zsl_preview.so)
+            ;&
+        vendor/lib/libchromatix_imx219_ofilm_pad_zsl_preview.so)
+            ;&
+        vendor/lib/libchromatix_imx219_ofilm_zsl_preview.so)
+            ;&
+        vendor/lib/libchromatix_ov5648_foxconn_kivi_common.so)
+            ;&
+        vendor/lib/libchromatix_ov5648_ofilm_ohw5f03_kiw_default_video.so)
+            ;&
+        vendor/lib/libchromatix_ov5648_foxconn_kivi_default_video.so)
+            ;&
+        vendor/lib/libchromatix_ov5648_foxconn_kivi_preview.so)
+            ;&
+        vendor/lib/libchromatix_ov5648_ofilm_ohw5f03_kiw_common.so)
+            ;&
+        vendor/lib/libchromatix_ov5648_ofilm_ohw5f03_kiw_preview.so)
+            ;&
+        vendor/lib/libchromatix_s5k4e1_sunny_kivi_common.so)
+            ;&
+        vendor/lib/libchromatix_s5k4e1_sunny_kivi_default_video.so)
+            ;&
+        vendor/lib/libchromatix_s5k4e1_sunny_kivi_preview.so)
+            ;&
+        vendor/lib/libchromatix_s5k4e1_sunny_kivi_snapshot.so)
+            ;&
+        vendor/lib/libmmcamera_ov5648_foxconn.so)
+            ;&
+        vendor/lib/libmmcamera_s5k4e1_sunny.so)
+            for LIBCUTILS_SHIM in $(grep -L "libshim_cutils.so" "${2}"); do
+                "${PATCHELF}" --add-needed "libshim_cutils.so" "$LIBCUTILS_SHIM"
+            done
+            ;;
+    esac
+}
+
 # Initialize the helper
 setup_vendor "$DEVICE" "$VENDOR" "$ANDROID_ROOT"
 
