@@ -17,6 +17,8 @@ DEVICE_PATH := device/huawei/kiwi
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
+BUILD_BROKEN_PREBUILT_ELF_FILES := true
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
