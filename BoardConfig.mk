@@ -176,7 +176,7 @@ BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/temp
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
-    /system/vendor/bin/signinfolistener|libshim_signinfolistener.so:\
+    /system/vendor/bin/signinfolistener|libshim_signinfolistener.so \
     /system/vendor/lib/libmmcamera_hdr_gb_lib.so|/system/vendor/lib/libmmqjpeg_codec.so
 
 # Vendor Init
