@@ -164,6 +164,7 @@ TARGET_USES_OLD_MNC_FORMAT := true
 #BOARD_SEPOLICY_DIRS += \
 #    device/huawei/kiwi/sepolicy
 SELINUX_IGNORE_NEVERALLOWS := true
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/temp
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
