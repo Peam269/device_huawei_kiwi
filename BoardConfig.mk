@@ -114,6 +114,9 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 # Keystore
 TARGET_PROVIDES_KEYMASTER := true
 
+# Legacy memfd
+TARGET_HAS_MEMFD_BACKPORT := true
+
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
