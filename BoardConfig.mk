@@ -33,6 +33,8 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CONFIG := kiwi-64_defconfig
 
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := kiwi
 
