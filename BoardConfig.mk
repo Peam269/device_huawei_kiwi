@@ -36,6 +36,8 @@ TARGET_KERNEL_SOURCE := kernel/huawei/kiwi
 #TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CONFIG := kiwi-64_defconfig
 
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+
 # Audio
 #AUDIO_FEATURE_HUAWEI_SOUND_PARAM_PATH := true
 
