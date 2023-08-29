@@ -49,7 +49,7 @@ on fs
     restorecon_recursive /persist
 
     wait /dev/block/bootdevice/by-name/oeminfo
-    start oeminfo_nvm
+    start vendor.oeminfo_nvm
 
     # Start HW service manager early
     start hwservicemanager
@@ -89,29 +89,29 @@ on post-fs-data
     mkdir /data/fpc 0700 system system
 
 # Start camera server as daemon
-service qcamerasvr /system/vendor/bin/mm-qcamera-daemon
+service vendor.qcamerasvr /system/vendor/bin/mm-qcamera-daemon
     class main
     user camera
     group camera gps system inet input graphics
 
 on property:init.svc.media=restarting
-    restart qcamerasvr
+    restart vendor.qcamerasvr
 
 on property:init.svc.servicemanager=restarting
-    restart qcamerasvr
+    restart vendor.qcamerasvr
 
 service vendor.qseecomd /system/vendor/bin/qseecomd
     class core
     user root
     group root
 
-service perfd /system/vendor/bin/perfd
+service vendor.perfd /system/vendor/bin/perfd
     class main
     user root
     group system
     disabled
 
-service thermal-engine /system/vendor/bin/thermal-engine
+service vendor.thermal-engine /system/vendor/bin/thermal-engine
     class main
     user root
     socket thermal-send-client stream 0666 system system
@@ -119,24 +119,24 @@ service thermal-engine /system/vendor/bin/thermal-engine
     socket thermal-recv-passive-client stream 0666 system system
     group root
 
-service time_daemon /system/vendor/bin/time_daemon
+service vendor.time_daemon /system/vendor/bin/time_daemon
     class late_start
     user root
     group root
 
-service ppd /system/vendor/bin/mm-pp-daemon
+service vendor.ppd /system/vendor/bin/mm-pp-daemon
     class hal
     user system
     socket pps stream 0660 system system
     group system graphics
 
-service wcnss-service /vendor/bin/wcnss_service
+service vendor.wcnss-service /vendor/bin/wcnss_service
     class late_start
     user system
     group system wifi radio
     oneshot
 
-service imsqmidaemon /system/vendor/bin/imsqmidaemon
+service vendor.imsqmidaemon /system/vendor/bin/imsqmidaemon
     class main
     user system
     socket ims_qmid stream 0660 system radio
@@ -156,4 +156,4 @@ on charger
     chown root system /sys/class/power_supply/bms/voltage_ocv
     chmod 0664 /sys/class/power_supply/bms/current_now
     chmod 0664 /sys/class/power_supply/bms/voltage_ocv
-    start vm_bms
+    start vendor.vm_bms
