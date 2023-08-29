@@ -44,9 +44,6 @@ on early-init
     write /sys/bus/msm_subsys/devices/subsys1/restart_level related
     write /sys/bus/msm_subsys/devices/subsys2/restart_level related
 
-on init
-    export LD_PRELOAD libshim_cutils.so
-
 on post-fs
     # Allow writing to the kernel trace log.
     chmod 0222 /sys/kernel/debug/tracing/trace_marker
