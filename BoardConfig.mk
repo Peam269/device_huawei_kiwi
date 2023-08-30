@@ -172,10 +172,10 @@ TARGET_RIL_VARIANT := caf
 TARGET_USES_OLD_MNC_FORMAT := true
 
 # SELinux
-#include device/qcom/sepolicy-legacy/sepolicy.mk
+include device/qcom/sepolicy-legacy/sepolicy.mk
 
-#BOARD_SEPOLICY_DIRS += \
-#    device/huawei/kiwi/sepolicy
+BOARD_SEPOLICY_DIRS += \
+    device/huawei/kiwi/sepolicy
 SELINUX_IGNORE_NEVERALLOWS := true
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/temp
 
