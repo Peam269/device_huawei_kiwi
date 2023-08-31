@@ -281,8 +281,7 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.target-from-init.rc \
     init.target.rc \
-    ueventd.qcom.rc \
-    pulse.sh
+    ueventd.qcom.rc
 
 # Recovery
 PRODUCT_PACKAGES += \
