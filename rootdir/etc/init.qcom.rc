@@ -122,6 +122,9 @@ on boot
 
     mkdir /dev/oinv 775 root system
 
+    # Prevents permission denied error for telephony
+    chmod 0644 /proc/cmdline
+
 # msm specific files that need to be created on /data
 on post-fs-data
     # Create directory for TZ Apps
