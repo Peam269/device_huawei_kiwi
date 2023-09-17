@@ -184,7 +184,8 @@ TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib/libmmcamera_hdr_gb_lib.so|/system/vendor/lib/libmmqjpeg_codec.so \
     /system/vendor/lib/libdmd.so|libshim_cutils.so \
     /system/vendor/lib64/hw/fingerprint.msm8916.so|libshim_cutils.so \
-    /system/vendor/lib64/sensors.kiwi.so|libshim_cutils.so
+    /system/vendor/lib64/sensors.kiwi.so|libshim_cutils.so \
+    /system/vendor/lib64/libcalmodule_akm.so|libshim_cutils.so
 
 # Vendor Init
 TARGET_INIT_VENDOR_LIB := libinit_kiwi
