@@ -120,7 +120,7 @@ on enable-low-power
     write /sys/module/process_reclaim/parameters/pressure_max 70
     write /sys/module/process_reclaim/parameters/swap_opt_eff 30
 
-    start vendor.perfd
+    start perfd
 
 on charger
     write /sys/module/lpm_levels/parameters/sleep_disabled 0

@@ -212,31 +212,31 @@ on property:bluetooth.startbtsnoop=true
 on property:bluetooth.startbtsnoop=false
     stop btsnoop
 
-service vendor.qcom-c_main-sh /system/vendor/bin/init.class_main.sh
+service qcom-c_main-sh /system/vendor/bin/init.class_main.sh
     class main
     user root
     oneshot
 
 on property:vold.decrypt=trigger_restart_framework
-    start vendor.qcom-c_main-sh
-    start vendor.wcnss-service
+    start qcom-c_main-sh
+    start wcnss-service
 
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
 
-service vendor.irsc_util /system/vendor/bin/irsc_util "/system/vendor/etc/sec_config"
+service irsc_util /system/vendor/bin/irsc_util "/system/vendor/etc/sec_config"
     class main
     user root
     oneshot
 
-service vendor.rmt_storage /system/vendor/bin/rmt_storage
+service rmt_storage /system/vendor/bin/rmt_storage
     class core
     user root
     group system wakelock
     seclabel u:r:rmt_storage:s0
     shutdown critical
 
-service vendor.hciattach /system/vendor/bin/init.qcom.bt.sh
+service hciattach /system/vendor/bin/init.qcom.bt.sh
     class late_start
     user bluetooth
     group bluetooth net_bt_admin system
@@ -245,7 +245,7 @@ service vendor.hciattach /system/vendor/bin/init.qcom.bt.sh
     oneshot
 
 on property:vendor.bluetooth.hciattach=true
-    start vendor.hciattach
+    start hciattach
 
 # FM
 on property:vendor.hw.fm.init=0
@@ -262,18 +262,18 @@ service btsnoop /system/bin/btsnoop
    oneshot
 
 # QMUX must be in multiple groups to support external process connections
-service vendor.qmuxd /system/vendor/bin/qmuxd
+service qmuxd /system/vendor/bin/qmuxd
     class main
     user root
     group radio audio bluetooth gps oem_2950 wakelock
     disabled
 
-service vendor.netmgrd /system/vendor/bin/netmgrd
+service netmgrd /system/vendor/bin/netmgrd
     class main
     group wakelock
     disabled
 
-service vendor.qti /system/vendor/bin/qti
+service qti /system/vendor/bin/qti
     class main
     disabled
 
@@ -328,7 +328,7 @@ on property:sys.qbcharger.enable=true
 on property:sys.qbcharger.enable=false
     stop qbcharger
 
-service vendor.vm_bms /system/vendor/bin/vm_bms
+service vm_bms /system/vendor/bin/vm_bms
     class main
     user root
     group root wakelock
