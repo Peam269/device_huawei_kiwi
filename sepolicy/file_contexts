@@ -3,9 +3,6 @@
 /dev/fpc1020                                               u:object_r:fingerprint_device:s0
 /sys/devices/platform/fingerprint(/.*)?                    u:object_r:fingerprint_sysfs:s0
 
-# Lights
-/sys/devices/soc\.0/gpio-leds\.[a-z0-9]+/leds(/.*)?        u:object_r:sysfs_leds:s0
-
 # Oem Info
 /dev/oinv(/.*)?                                            u:object_r:oeminfo_device:s0
 /dev/socket/oeminfo_nvm                                    u:object_r:oeminfo_socket:s0
@@ -26,8 +23,6 @@
 /system/vendor/bin/libqmi_oem_main                         u:object_r:libqmi_oem_main_exec:s0
 /system/vendor/bin/signinfolistener                        u:object_r:signinfolistener_exec:s0
 /system/vendor/bin/teecd                                   u:object_r:tee_exec:s0
-
-/dev/stune(/.*)?                                           u:object_r:cgroup:s0
 
 # HALs
 /system/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@1\.0-service\.kiwi     u:object_r:hal_fingerprint_default_exec:s0

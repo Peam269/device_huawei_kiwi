@@ -56,7 +56,7 @@ int main() {
         ALOGE("%s: failed to load %s: %s\n", __func__, QMI_OEM_API_LIB_NAME, dlerror());
         goto shutdown;
     }
-    
+
     service = new Light(std::move(backlight), qmiApi);
 
     configureRpcThreadpool(1, true);
