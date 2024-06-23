@@ -151,7 +151,8 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.class_main.sh \
     init.target-from-init.rc \
-    init.target.rc
+    init.target.rc \
+    thermal_engine.sh
 
 #    fstab.qcom \
 #    init.class_main.sh \
