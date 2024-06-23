@@ -59,6 +59,7 @@ BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 
 # Display
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
+TARGET_SCREEN_DENSITY := 460
 
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := sdfat
@@ -101,7 +102,6 @@ BOARD_USES_QC_TIME_SERVICES := true
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := ABGR_8888
-TARGET_RECOVERY_DENSITY := xhdpi
 
 # Release
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
