@@ -1,5 +1,4 @@
 # Audio
-audio.deep_buffer.media=true
 persist.vendor.audio.dualmic.config=endfire
 persist.vendor.audio.fluence.speaker=true
 persist.vendor.audio.fluence.voicecall=true
@@ -7,26 +6,13 @@ persist.vendor.audio.fluence.voicerec=false
 # can be "fluence" or "fluencepro" or "none"
 ro.vendor.audio.sdk.fluencetype=fluence
 ro.vendor.audio.sdk.ssr=false
-vendor.audio_hal.period_size=240
-vendor.voice.path.for.pcm.voip=true
 vendor.voice.playback.conc.disabled=false
 vendor.voice.record.conc.disabled=false
 vendor.voice.voip.conc.disabled=true
 
 # Audio Offload
 audio.offload.disable=false
-audio.offload.gapless.enabled=true
-audio.offload.min.duration.secs=30
 audio.offload.pcm.enable=true
-audio.offload.video=true
-vendor.audio.offload.buffer.size.kb=64
-
-# Bluetooth
-ro.bluetooth.dun=true
-ro.bluetooth.hfp.ver=1.6
-ro.bluetooth.sap=true
-ro.qualcomm.bt.hci_transport=smd
-vendor.qcom.bluetooth.soc=smd
 
 # Camera
 persist.camera.cpp.duplication=false
@@ -45,25 +31,14 @@ dalvik.vm.zygotemaxfailedboots=5
 debug.composition.type=c2d
 debug.cpurend.vsync=false
 debug.egl.hw=0
-debug.enable.sglscale=1
-debug.hwui.use_buffer_age=false
 debug.mdpcomp.logs=0
-debug.mdpcomp.idletime=600
-debug.sf.disable_backpressure=1
 debug.sf.hw=0
-debug.sf.latch_unsignaled=1
 persist.demo.hdmirotationlock=false
-persist.hwc.mdpcomp.enable=true
-persist.hwc.ptor.enable=true
-ro.opengles.version=196610
 ro.qualcomm.cabl=0
 ro.qcom.ad=1
 ro.qcom.ad.calib.data=/system/etc/calib_kiw.cfg
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 sys.hwc.gpu_perf_mode=1
-
-# DRM
-drm.service.enabled=1
 
 # Lmkd
 ro.lmk.low=1001
@@ -79,8 +54,6 @@ ro.lmk.kill_timeout_ms=100
 log.tag.VM_BMS=WARN
 
 # Media
-debug.stagefright.omx_default_rank.sw-audio=1
-debug.stagefright.omx_default_rank=0
 media.aac_51_output_enabled=true
 media.stagefright.enable-player=true
 media.stagefright.enable-http=true
@@ -91,11 +64,6 @@ media.stagefright.enable-scan=true
 mm.enable.sec.smoothstreaming=true
 mm.enable.smoothstreaming=true
 mmp.enable.3g2=true
-ro.config.media_vol_steps=20
-ro.config.vc_call_vol_steps=10 
-
-# Memory optimizations
-ro.vendor.qti.sys.fw.bservice_enable=true
 
 # Net
 persist.data.netmgrd.qos.enable=true
@@ -110,20 +78,11 @@ ro.sf.lcd_density=480
 
 # Perf
 ro.am.reschedule_service=true
-ro.config.max_starting_bg=8
-ro.core_ctl_min_cpu=0
-ro.core_ctl_max_cpu=4
-ro.min_freq_0=960000
-ro.min_freq_4=800000
-ro.vendor.extension_library=libqti-perfd-client.so
 
 # Radio
 DEVICE_PROVISIONED=1
 persist.data.ds_fmc_app.mode=0
-persist.data.qmi.adb_logmask=0
 persist.omh.enabled=0
-persist.radio.add_power_save=1
-persist.radio.apm_sim_not_pwdn=1
 persist.radio.force_nw_search=1
 persist.radio.force_on_dc=true
 persist.radio.modem.cap=7E442
@@ -158,7 +117,6 @@ ro.hwpp_sig_stability_switch=true
 ro.multi.rild=true
 ro.ril.hsxpa=1
 ro.ril.gprsclass=10
-ro.telephony.call_ring.multiple=false
 ro.use_data_netmgrd=true
 
 # Security patch level
@@ -167,6 +125,3 @@ ro.lineage.build.vendor_security_patch=2018-02-01
 # Tethering
 sys.usb.rps_mask=10
 persist.sys.usb.config.extra=none
-
-# WiFi
-wifi.interface=wlan0
