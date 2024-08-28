@@ -20,6 +20,9 @@ DEVICE_PATH := device/huawei/kiwi
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
+#### REMOVE!!!!!
+BUILD_BROKEN_PREBUILT_ELF_FILES := true
+
 # Architecture
 #TARGET_BOARD_SUFFIX := _64
 #TARGET_USES_64_BIT_BINDER := true
