@@ -39,7 +39,6 @@ ro.qcom.ad=1
 ro.qcom.ad.calib.data=/system/etc/calib_kiw.cfg
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 sys.hwc.gpu_perf_mode=1
-ro.config.avoid_gfx_accel=true
 
 # Lmkd
 ro.lmk.low=1001
